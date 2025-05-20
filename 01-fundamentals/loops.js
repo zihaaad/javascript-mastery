@@ -101,3 +101,40 @@ const map = new Map([
 for (let [key, value] of map) {
   //   console.log(key, value);
 }
+
+// ===== while and do...while loop =====
+
+/* // while loop can execute a block of code as long as a specified condition is true 
+
+while (condition) {
+  // code block to be executed
+} 
+  */
+
+let txt2 = "";
+let i2 = 1;
+while (i2 <= 10) {
+  txt2 += "The number is " + i2 + "\n";
+  i2++;
+}
+
+/* // The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+ do {
+    // code block to be executed
+  } 
+ while (condition) */
+
+let txt3 = " ";
+let i3 = 1;
+do {
+  txt3 += "The number is " + i3 + "\n";
+  i3++;
+} while (i3 <= 10);
+
+let i4 = 0;
+let carTxt2 = "";
+while (cars[i4]) {
+  carTxt2 += cars[i4] + "\n";
+  i4++;
+}
