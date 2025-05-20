@@ -3,8 +3,8 @@
 // There are different kinds of loops:
 /* 
  - for = loops through a block of code a number of times.
- - for/in = loops through the properties of an object.
- - for/of = loops through values of an iterable object and others iterable data structures such as Arrays, Strings, Maps, Nodelists and more.
+ - for...in = loops through the properties of an object.
+ - for...of = loops through the values of an iterable object, such as Arrays, Strings, Maps, Sets, NodeLists, and other iterable data structures.
  - while = loops through a block of code while a specified condition in true
  - do/while = also loops through a block of code while a specified condition is true
 */
@@ -21,7 +21,7 @@ for (expression 1; expression 2; expression 3) {
 */
 
 for (let i = 0; i < 10; i++) {
-  console.log("The number is " + i);
+  //   console.log("The number is " + i);
 }
 
 // exp1 is optional, we can initialize the variable and value before the loop starts.
@@ -44,7 +44,60 @@ for (i = 0, length = cars.length, text = ""; i < length; i++) {
 
 let val = 1;
 for (;;) {
-  console.log("val is: ", val);
+  //   console.log("val is: ", val);
   val++;
   if (val >= 11) break;
+}
+
+// ====== for in loop ======
+/* for (key in object) {
+     code block to be executed
+ } */
+
+const person = {fname: "Zihad", lname: "Islam", age: 21};
+let personTxt = "";
+
+for (let x in person) {
+  personTxt += person[x] + " ";
+}
+
+/* 
+for in can also iterate array but do not use for in over array if the index order is imporant. Instead use for, for of or array.forEarch() when the order is important. 
+
+for (variable in array) {
+     code block to be executed
+ } */
+
+const nums = [24, 54, 56, 78];
+let numTxt = " ";
+for (let x in nums) {
+  numTxt += nums[x];
+}
+
+// ======== for of ==========
+
+/* 
+for (variable of iterable) {
+    // code block to be executed
+ }
+*/
+
+let carTxt = "";
+for (let x of cars) {
+  carTxt += x;
+}
+
+let language = "JavaScript";
+let langTxt = " ";
+
+for (let x of language) {
+  langTxt += x + " ";
+}
+
+const map = new Map([
+  ["a", 1],
+  ["b", 2],
+]);
+for (let [key, value] of map) {
+  //   console.log(key, value);
 }
